@@ -4,70 +4,85 @@ Public developer resources for working with LifyX Spot market data.
 
 ## Overview
 
-LifyX Spot provides high-performance market data designed for professional trading applications, analytics tools and automated trading systems.
+LifyX Spot provides high-performance decentralized spot trading designed for speed, scale and privacy.
 
-This section will contain examples for accessing and working with Spot market information.
+LifyX Spot integrates KalqiX infrastructure for spot market execution, market data and trading functionality.
 
-## Market Data Resources
+This directory contains public developer examples for retrieving and working with LifyX Spot market information.
 
-Examples will cover:
+## Infrastructure Provider
 
-- Trading pairs
-- Ticker information
-- Best bid and ask
-- Order book data
-- Recent trades
-- Price information
-- Volume information
-- Market status
-- Token metadata
+KalqiX
 
-## Performance
-
-LifyX Spot infrastructure is designed to support:
+## Spot Capabilities
 
 - Sub-10ms matching
 - 250K+ transactions per second
-- High-performance market data
-- Professional order book trading
 - ZK-proven trades
 - Private execution
+- Professional order book trading
+- High-performance market data
+- API-ready trading infrastructure
 
-## Planned Examples
+## Available Examples
 
-### Get Markets
+### Markets
 
-Retrieve available Spot trading markets and trading pairs.
+`get-markets.js`
 
-### Get Ticker
+Retrieves the list of available Spot markets.
 
-Retrieve current market information for a selected trading pair.
+### Order Book
 
-### Get Order Book
+`get-order-book.js`
 
-Retrieve bid and ask data for a Spot market.
+Retrieves public bid and ask data for a selected Spot market.
 
-### Get Recent Trades
+### Market Price
 
-Retrieve recent public trades for a selected market.
+`get-price.js`
 
-### WebSocket Market Data
+Retrieves the current price for a selected Spot market.
 
-Subscribe to real-time market updates.
+### Recent Trades
+
+`get-recent-trades.js`
+
+Retrieves recent public trades for a selected Spot market.
+
+### Server Time
+
+`get-server-time.js`
+
+Retrieves the current server time from the Spot trading infrastructure.
+
+## Example Market
+
+Most market-specific examples use:
+
+`cbBTC_USDC`
+
+Developers can replace the ticker with another supported LifyX Spot market.
+
+## API Infrastructure
+
+Production API:
+
+`https://api.kalqix.com/v1`
+
+Examples in this directory use public KalqiX infrastructure integrated within LifyX Spot.
 
 ## Security
 
-Market data examples should never require:
+Public market data examples should never require:
 
 - Private keys
 - Seed phrases
 - Wallet credentials
 
-Never expose sensitive credentials in public source code.
+Never expose private keys, API secrets or sensitive environment variables in public source code.
 
 ## Documentation
-
-LifyX Developer Documentation:
 
 https://github.com/LifyXHQ/lifyx-docs
 
@@ -75,7 +90,7 @@ https://github.com/LifyXHQ/lifyx-docs
 
 Website: https://lifyx.exchange
 
-Trading Platform: https://dex.lifyx.exchange
+Trading Platform: https://app.lifyx.exchange
 
 Support: support@lifyx.exchange
 
