@@ -11,15 +11,25 @@ LifyX integrates specialized infrastructure providers across its trading stack:
 - KalqiX infrastructure for Spot markets
 - Orderly infrastructure for Perpetual markets
 
+The examples in this repository demonstrate public market data workflows, trading information and developer integration patterns across both environments.
+
+## Repository Structure
+
+examples/
+├── spot/
+│   └── market-data/
+└── perpetuals/
+    └── market-data/
+
 ## LifyX Spot
 
 LifyX Spot provides high-performance decentralized spot trading designed for speed, scale and privacy.
 
-### Infrastructure
+### Infrastructure Provider
 
-LifyX Spot integrates KalqiX infrastructure for spot market execution, market data and trading functionality.
+KalqiX
 
-### Spot Capabilities
+### Core Capabilities
 
 - Sub-10ms matching
 - 250K+ transactions per second
@@ -29,62 +39,76 @@ LifyX Spot integrates KalqiX infrastructure for spot market execution, market da
 - High-performance market data
 - API-ready trading infrastructure
 
-### Spot Examples
+### Spot Market Data Examples
 
-- Market data
-- Trading pairs
-- Ticker data
-- Best bid and ask
-- Order book data
-- Recent trades
-- Trade history
-- Order management
-- Authentication
-- Wallet connectivity
-- Network information
-- Token metadata
-- Deposits and withdrawals
+Location:
+
+`examples/spot/market-data/`
+
+Available examples:
+
+- `get-markets.js`
+- `get-order-book.js`
+- `get-price.js`
+- `get-recent-trades.js`
+- `get-server-time.js`
+
+These examples demonstrate public Spot market data workflows using KalqiX infrastructure integrated within LifyX Spot.
 
 ## LifyX Perpetuals
 
 LifyX Perpetuals provides decentralized perpetual trading across crypto and global markets through a self-custodial trading experience.
 
-### Infrastructure
+### Infrastructure Provider
 
-LifyX Perpetuals integrates Orderly infrastructure for perpetual markets, liquidity access, market data and trading functionality.
+Orderly
 
-### Perpetual Examples
+### Perpetual Market Data Examples
 
-- Perpetual market data
-- Funding rates
-- Order book data
-- Account information
-- Open positions
-- Orders
-- Order history
-- Wallet connectivity
-- Network information
-- Trading utilities
+Location:
 
-## Infrastructure Providers
+`examples/perpetuals/market-data/`
 
-### KalqiX
+Available examples:
 
-KalqiX infrastructure is used within LifyX Spot for high-performance spot trading and market data functionality.
+- `get-public-data.js`
+- `get-markets.js`
+- `get-order-book.js`
+- `get-funding-rate.js`
+- `get-funding-history.js`
+- `get-futures-info.js`
+- `get-futures-market.js`
+- `get-mark-price.js`
+- `get-index-price.js`
+- `get-recent-trades.js`
+- `get-kline.js`
+- `get-market-stats.js`
 
-### Orderly
+These examples demonstrate public Perpetual market data workflows using Orderly infrastructure integrated within LifyX Perpetuals.
 
-Orderly infrastructure is used within LifyX Perpetuals for decentralized perpetual markets, liquidity and trading functionality.
+## Example Markets
 
-## Repository Structure
+Spot examples commonly use:
 
-examples/
-├── spot/
-│   └── market-data/
-├── perpetuals/
-├── wallet/
-├── networks/
-└── utilities/
+`cbBTC_USDC`
+
+Perpetual examples commonly use:
+
+`PERP_BTC_USDC`
+
+Developers can replace these symbols with other supported LifyX markets.
+
+## Developer Documentation
+
+Official LifyX developer documentation:
+
+https://github.com/LifyXHQ/lifyx-docs
+
+## Changelog
+
+Platform updates and release notes:
+
+https://github.com/LifyXHQ/lifyx-changelog
 
 ## Security
 
@@ -96,19 +120,15 @@ Never expose:
 - Wallet credentials
 - Environment secrets
 
-## Documentation
+Public market data examples should not require sensitive wallet credentials.
 
-https://github.com/LifyXHQ/lifyx-docs
-
-## Changelog
-
-https://github.com/LifyXHQ/lifyx-changelog
+Always use secure secret management for authenticated integrations.
 
 ## Official Links
 
 Website: https://lifyx.exchange
 
-Trading Platform: https://dex.lifyx.exchange
+Trading Platform: https://app.lifyx.exchange
 
 X: https://x.com/LifyX_Exchange
 
