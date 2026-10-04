@@ -1,0 +1,16 @@
+# LifyX CODEOWNERS
+
+# Default owner for the entire repository
+* @LifyX-Exchange
+
+# API examples
+/examples/ @LifyX-Exchange
+
+# Documentation
+*.md @LifyX-Exchange
+
+# Security policy
+SECURITY.md @LifyX-Exchange
+
+# License
+LICENSE @LifyX-Exchange
