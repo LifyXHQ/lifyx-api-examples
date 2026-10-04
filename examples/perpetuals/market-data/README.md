@@ -8,55 +8,93 @@ LifyX Perpetuals provides decentralized perpetual trading across crypto and glob
 
 LifyX Perpetuals integrates Orderly infrastructure for perpetual market data, liquidity access and trading functionality.
 
-This section contains developer examples related to perpetual market information and public trading data.
+This directory contains public developer examples for retrieving and working with LifyX Perpetual market information.
 
-## Market Data Resources
+## Infrastructure Provider
 
-Examples will cover:
+Orderly
 
-- Perpetual markets
-- Trading symbols
-- Market information
-- Order book data
-- Funding rates
-- Index prices
-- Mark prices
-- Open interest
-- Recent trades
-- Market status
-- Token and asset metadata
+## Available Examples
 
-## Planned Examples
+### Markets
 
-### Get Markets
+`get-markets.js`
 
-Retrieve available LifyX Perpetual markets.
+Retrieves available perpetual markets and trading rules.
 
-### Get Market Information
+### Futures Information
 
-Retrieve information for a selected perpetual market.
+`get-futures-info.js`
 
-### Get Order Book
+Retrieves information for all available perpetual markets.
 
-Retrieve bid and ask data for a perpetual market.
+### Single Market Information
 
-### Get Funding Rate
+`get-futures-market.js`
 
-Retrieve current funding rate information.
+Retrieves information for a selected perpetual market.
 
-### Get Mark Price
+### Order Book
 
-Retrieve the current mark price for a selected market.
+`get-order-book.js`
 
-### Get Open Interest
+Retrieves public bid and ask data for a selected perpetual market.
 
-Retrieve current open interest data.
+### Recent Trades
 
-## Infrastructure
+`get-recent-trades.js`
 
-Infrastructure Provider: Orderly
+Retrieves recent public trades for a selected perpetual market.
 
-LifyX integrates Orderly infrastructure to support decentralized perpetual trading, liquidity access, market data and execution functionality.
+### Funding Rate
+
+`get-funding-rate.js`
+
+Retrieves the predicted funding rate for a selected perpetual market.
+
+### Funding History
+
+`get-funding-history.js`
+
+Retrieves historical funding rate information.
+
+### Mark Price
+
+`get-mark-price.js`
+
+Retrieves the mark price for a selected perpetual market.
+
+### Index Price
+
+`get-index-price.js`
+
+Retrieves the index price for a selected perpetual market.
+
+### Kline Data
+
+`get-kline.js`
+
+Retrieves candlestick market data.
+
+### Market Statistics
+
+`get-market-stats.js`
+
+Retrieves available 24-hour market statistics.
+
+### Public API Example
+
+`get-public-data.js`
+
+Basic example for interacting with public Orderly infrastructure.
+
+## Example Market
+
+Most examples use:
+
+`PERP_BTC_USDC`
+
+Developers can replace the symbol with another supported LifyX Perpetual market.
 
 ## Security
 
@@ -66,7 +104,7 @@ Public market data examples should never require:
 - Seed phrases
 - Wallet credentials
 
-Never expose sensitive credentials in public source code.
+Never expose private keys, API secrets or sensitive environment variables in public source code.
 
 ## Documentation
 
